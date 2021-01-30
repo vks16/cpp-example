@@ -14,6 +14,6 @@ int main()
 {
 	std::vector<int> values = {1, 5, 4, 2, 3};
 
-	forEach(values, [](int value) { std::cout << value << std::endl; }), 
+	forEach(values, [](int value) -> void { std::cout << value << std::endl; }), 
 	std::cin.get();
 }
