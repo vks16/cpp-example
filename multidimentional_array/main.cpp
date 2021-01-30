@@ -22,5 +22,23 @@ int main()
         }
     }
 
+    // now to delete these memory, we can't just use delete[] a2d; because it will just delete top 50 pointers and leave the 2nd dimension which contains the actual value
+
+    for(int i = 0; i < 50 ; i++)
+    {
+        delete[] a2d[i];
+    }
+    delete[] a2d;
+
+    for(int x=0; x<50; x++)
+    {
+        for(int y=0; y<50; y++)
+        {
+            delete[] a3d[x][y];
+        }
+        delete[] a3d[x];
+    }
+    delete[] a3d;
+
     return 0;
 }
