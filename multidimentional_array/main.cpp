@@ -40,5 +40,17 @@ int main()
     }
     delete[] a3d;
 
+
+    // making 2d array with 1d array
+    int* arr = new int[5 * 5];
+    for(int y = 0; y<5; y++)
+    {
+        for(int x = 0; x < 5; x++)
+        {
+            arr[x + y * 5] = 2;
+        }
+    }
+
+    delete[] arr;
     return 0;
 }
